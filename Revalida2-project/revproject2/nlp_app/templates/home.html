@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sentiment App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+        .navbar {
+        padding-top: 80px;
+        }
+
+        .nav-link {
+        font-family: Roboto, Helvetica Neue, sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        color: #fff;
+        min-width: 88px;
+        line-height: 36px;
+        padding: 0 16px;
+        border-radius: 2px;
+        text-align: center;
+        }
+
+        .nav-link:hover {
+        background: rgba(255, 255, 255, 0.4);
+        box-sizing: border-box;
+        position: relative;
+        color: #f4f4f4;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+        outline: 0;
+        border: none;
+        }
+
+        .navbar-brand {
+        font-family: Roboto, Helvetica Neue, sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: #f4f4f4;
+        padding: 0 16px;
+        }
+
+        .hero {
+        height: 800px;
+        background: url('https://wallpapercave.com/dwp1x/wp5485213.jpg');
+        background-size: cover;
+        background-position: center;
+        
+        }
+
+        .hero-heading {
+            border: 1px solid #fff;
+            background: rgba(0,0,0, 0.4);
+            color: #fff;
+            padding: 25px 50px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            outline: none;
+            font-weight: 300;
+            margin-top: 80px;
+            margin-left: 150px;
+            margin-right: 150px;
+            transition: 0.65s;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-family: Verdana, Helvetica Neue, sans-serif;
+          }
+          
+        
+
+        .btnD1 {
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 50px;
+            padding: 10px 50px;
+            font-size: 1.15rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            outline: none;
+            font-weight: 600;
+            margin-top: 150px;
+            transition: 0.65s;
+          }
+        
+        .btnD1:hover {
+            background: rgba(0,0,0, 0.4);
+            color: #fff;
+          }
+        
+        .hero-sub-title {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+
+        /* 
+        =================================
+        --------- Media Query -----------
+        ===============================*/
+
+        /*==============================
+        ---------- Mobile View  --------
+        ==============================*/
+        @media (min-width: 350px) and (max-width: 1024px) {
+        .navbar {
+        padding-top: 20px;
+        }
+        
+        .navbar-collapse {
+            background-color: #fff;
+            padding: 20px;
+            z-index: 55;
+        }
+
+        nav {
+            ul li > a {
+            color: #807cb9 !important;
+            &:hover {
+                opacity: 0.8;
+            }
+            }
+        }
+        }
+
+        /* Mobile -btn */
+        .navbar-dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .navbar-dark .navbar-toggler {
+        border-color: transparent !important;
+        &:focus {
+            border-color: transparent !important;
+        }
+        }
+
+        /* ========================
+        -------- Desktop ----------
+        =========================*/
+
+        @media (min-width: 1200px) {
+        .navbar {
+            width: 1140px;
+            padding-left: 120px;
+        }
+
+        .text-white {
+            font-family: "Open Sans", sans-serif;
+        }
+        }
+
+
+    </style>
+
+</head>
+<body>
+        <header>
+            <div class="hero">
+                  <div class="container">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                
+                        <a class="navbar-brand" href="home.html"><img src="https://static.thenounproject.com/png/4632998-200.png" target="blank" alt="logo" height="100"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav mr-auto">
+                
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="analyze/">Analyze</a>
+                            </li>
+                            </ul>
+                
+                        </div>
+                        </nav>
+                        <div class="hero-heading">
+                            Sentiment Analysis
+                        </div>
+                        <div class="hero-sub-title">
+                            <a href="analyze/" class="btn btnD1">Let's start</a>
+                        </div>
+                  </div>
+                </div>
+              </header>
+
+              <section>
+                <div class="p-3 mt-5 text-center">
+                  All rights reserved.
+                </div>
+              
+              </section>
+              
+</body>
+</html>
